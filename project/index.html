@@ -1,0 +1,85 @@
+<html>
+<head>
+
+    <title>Room</title>
+
+    <style>
+        canvas {
+            width: 1700px;
+            height: 766px;
+            border: 5px solid black;
+        }
+
+        audio {
+            display: none;
+        }
+
+        button {
+            margin: 0 20px 20px 0;
+            width: 89px;
+        }
+
+        input[type='checkbox'] {
+            display: none;
+        }
+
+        img {
+            display: none;
+        }
+
+        body {
+            background: url(static/back.jpg) no-repeat;
+            background-size: 100%;
+        }
+
+        h1 {
+            color: red;
+        }
+
+    </style>
+
+    <script src="/socket.io/socket.io.js"></script>
+
+</head>
+
+<body>
+
+
+<canvas id="canvas"></canvas>
+
+
+<div id="container">
+    <audio autoplay controls></audio>
+
+    <h1>Tap any button to turn on microphone</h1>
+    <div id="options">
+        <input type="checkbox" id="renderLocally" disabled><label for="renderLocally"></label>
+    </div>
+
+    <div id="buttons">
+        <button id="start">Start</button>
+        <button id="stop" disabled>Stop</button>
+    </div>
+</div>
+
+<img id="map" src="/static/map.jpg">
+<img id="theory" src="/static/forth.png">
+<img id="person" src="/static/person.png">
+<img id="test" src="/static/test.png">
+<img id="right" src="/static/right.png">
+<img id="wrong" src="/static/wrong.png">
+<img id="time" src="/static/time.png">
+<img id="history" src="/static/history.png">
+<img id="goodReward" src="/static/goodReward.png">
+<img id="badReward" src="/static/badReward.png">
+
+<script src="https://webrtc.github.io/adapter/adapter-latest.js"></script>
+<script src="/static/webaudioextended.js"></script>
+<script src="/static/main.js" async></script>
+<script src="../../../js/lib/ga.js"></script>
+<script src="/static/game.js"></script>
+
+</body>
+
+
+</html>
